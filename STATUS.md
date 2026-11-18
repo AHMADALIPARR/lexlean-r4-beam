@@ -85,10 +85,26 @@ One organized repo cut from two upstreams, by the GitHub size rule:
 
 ## Not verified / limits (plain facts)
 
-- v13 pieces: NOT verified here. The v13-0.6B branch clone was still
-  downloading at cut time (`.git` 477 MB, working tree not checked
-  out, `index.lock` present); v13-1.7B had not started. Use
+- v13 pieces: v13-0.6B VERIFIED 2026-11-17 after the cut: 410/410
+  shards ok via `mvmctl weights verify v13_qwen3_0_6b` with a staging
+  gpu root (symlinks in `/tmp/v13-06b-gpu/weights/v13_qwen3_0_6b/`).
+  Branch layout correction: v13 branches are FLAT at the branch root
+  (617 files: 410 pieces + 205 parity + 2 manifests), NOT under
+  `weights/<pack>/` as first assumed — the v12 branch IS under
+  `weights/v12_360m/`. The original clone script's `find weights/…`
+  therefore counted 0 for v13-0.6B even though the clone had finished,
+  and its `sparse-checkout set weights` left the v13-1.7B working tree
+  empty (1634 files showing as deleted, index empty). Recovery:
+  `git sparse-checkout disable` + `git reset --hard HEAD` to fetch
+  the promisor blobs and check the tree out. v13-1.7B verification
+  was still in progress at the time of this edit; its count is not
+  stated here until `weights verify` reports it. Use the corrected
   `scripts/fetch-weights.sh` to fetch and verify on demand.
+- A VM restart during this work wiped system Erlang again
+  (`/usr/lib/erlang` gone, `escript` missing). Reinstalled OTP 25
+  from `~/workspace/.tools/erlang-debs/` (all 11 debs, same set as
+  2026-11-17); `erl -version` 13.1.5, `:inets` present, Elixir 1.18.4
+  working again before the v13-0.6B verify ran.
 - v10 XOR 2-of-3 parity reconstruction is NOT verified; parity files
   are only inventoried as present. v12 parity files are likewise
   inventoried, not reconstruction-verified.

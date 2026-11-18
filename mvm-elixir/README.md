@@ -113,10 +113,12 @@ Read from the manifests and receipts on disk, not assumed:
 | v13_qwen3_1_7b | Qwen3-1.7B (`Qwen/Qwen3-1.7B`) | 1,140,250,782 B | 1088 pieces | manifests only — pieces on branch `weights-v13-qwen3-1.7b` |
 
 In this beam repo the v12 pieces ARE in `gpu/weights/v12_360m/`
-(188/188 verified). The v13 pieces live on their own branches, with
-root-level `weights/<pack>/` directories (not under `gpu/`); use
-`scripts/fetch-weights.sh` in the repo root to fetch them on demand,
-then point `MVM_GPU_ROOT` at a branch root to verify a pack there.
+(188/188 verified). The v13 pieces live on their own branches,
+flat at the branch root (not under `weights/<pack>/` or `gpu/`);
+use `scripts/fetch-weights.sh` in the repo root to fetch them on
+demand, then verify through a staging directory as that script
+describes. v13-0.6B verified 410/410 on 2026-11-17; see the
+top-level STATUS.md.
 The tokenizer hash matches the hash stated in the upstream gpu README
 (`d36d3e87…0f89`), and `gpu/short.uorlut` carries the `UORLUT01` magic.
 

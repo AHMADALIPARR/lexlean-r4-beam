@@ -143,13 +143,19 @@ are in `gpu/weights/v13_qwen3_0_6b/` and `gpu/weights/v13_qwen3_1_7b/`,
 and their receipts are in `gpu/receipts/`, so the repository names
 the source models, the sizes, the piece counts, and the upstream
 branches. The pieces themselves live on the upstream branches
-`weights-v13-qwen3-0.6b` and `weights-v13-qwen3-1.7b`, at root-level
-`weights/<pack>/`, not under `gpu/`. `scripts/fetch-weights.sh`
-clones a branch sparsely, points `MVM_GPU_ROOT` at the branch root,
-and runs the same verification. The v13-0.6B branch clone was still
-downloading when this repository was cut, with its working tree not
-yet checked out, so its pieces are not verified here at all, and no
-count for that pack is stated as verified anywhere in this file.
+`weights-v13-qwen3-0.6b` and `weights-v13-qwen3-1.7b`, flat at the
+branch root — `manifest.json`, `piece_*.bin`, and `parity_*.bin` at
+the top level, not under `weights/<pack>/` and not under `gpu/`.
+(The v12 branch differs: its pieces are under
+`weights/v12_360m/`.) `scripts/fetch-weights.sh` clones a branch
+without sparse checkout and verifies through a staging directory
+with symlinks, because `mvmctl` expects `weights/<pack>/` under
+the gpu root. The v13-0.6B pieces were verified after this
+repository was cut, on 2026-11-17, at 410/410 shards ok against
+their manifest, from the branch clone at
+`~/workspace/lexlean-r4-weights-v13-qwen3-0.6b` (617 files on disk).
+The v13-1.7B pieces were still being recovered at that time; see
+STATUS.md for their state.
 
 ## The runtime: mvm-elixir
 
