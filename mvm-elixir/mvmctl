@@ -1,0 +1,8 @@
+#!/bin/sh
+# mvmctl — wrapper for the mvm_ex escript.
+# Sets the UTF-8 erl options Elixir expects and the toolchain paths,
+# then hands over to the built escript in this directory.
+export ELIXIR_ERL_OPTIONS="+fnu"
+export LC_ALL=C.UTF-8
+export PATH="$HOME/workspace/.tools/elixir-1.18.4/bin:$PATH"
+exec "$(dirname "$0")/mvm_ex" "$@"

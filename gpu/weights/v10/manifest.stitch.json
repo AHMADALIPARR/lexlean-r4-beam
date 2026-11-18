@@ -1,0 +1,239 @@
+{
+  "schema": "stitch/xor-2-of-3/1",
+  "scheme": "xor-2-of-3",
+  "threshold": 2,
+  "count": 3,
+  "base_manifest": "manifest.json",
+  "format": "UORR4V12",
+  "container_sha256": "fa4d31131213309bcadae0155067a86c7ef15d6383cc4bce5d23953a7dad30c3",
+  "total_bytes": 75684407,
+  "data_shard_count": 73,
+  "parity_shard_count": 37,
+  "groups": [
+    {
+      "group_index": 0,
+      "left": {"index": 0, "file": "shard_000.bin", "path": "weights/v10/shard_000.bin", "byte_offset": 0, "byte_length": 1048576, "sha256": "b81d70401cca883506a6e1b3adc53a85b92658b3087352b30e8b76e44929601c"},
+      "right": {"index": 1, "file": "shard_001.bin", "path": "weights/v10/shard_001.bin", "byte_offset": 1048576, "byte_length": 1048576, "sha256": "5ba4667f2fb745b3452a855985afb53983b64f368ac3cebade79c13eeb989f89"},
+      "parity": {"index": 0, "file": "parity_000.bin", "path": "weights/v10/parity_000.bin", "byte_length": 1048576, "sha256": "c3e3b7b696ad2ec7f7d1c715a46cb0bbfa633b0b1fba1382a3ed2a7538bc4a85"}
+    },
+    {
+      "group_index": 1,
+      "left": {"index": 2, "file": "shard_002.bin", "path": "weights/v10/shard_002.bin", "byte_offset": 2097152, "byte_length": 1048576, "sha256": "92a668ee043c4db279eeb84fca9a35cf247147b748c37ced0f18c89f59a1164f"},
+      "right": {"index": 3, "file": "shard_003.bin", "path": "weights/v10/shard_003.bin", "byte_offset": 3145728, "byte_length": 1048576, "sha256": "5ae4931656f45709dd1da86fa15759d1c41a9cc6a566434e1699933884805148"},
+      "parity": {"index": 1, "file": "parity_001.bin", "path": "weights/v10/parity_001.bin", "byte_length": 1048576, "sha256": "e8e33e0f5b3efb3ea604ce0b8f9d5a00ad42ea4cb47f362ce7e75475db18d33b"}
+    },
+    {
+      "group_index": 2,
+      "left": {"index": 4, "file": "shard_004.bin", "path": "weights/v10/shard_004.bin", "byte_offset": 4194304, "byte_length": 1048576, "sha256": "d8992d0abee1e92f418d7178e6b710dcbdc821a2abb9f2a715868c659e304978"},
+      "right": {"index": 5, "file": "shard_005.bin", "path": "weights/v10/shard_005.bin", "byte_offset": 5242880, "byte_length": 1048576, "sha256": "f552887e0267feed84e8a26c29be2e8779d9af09d174088e7a8aad664ccc666b"},
+      "parity": {"index": 2, "file": "parity_002.bin", "path": "weights/v10/parity_002.bin", "byte_length": 1048576, "sha256": "38540b7cd9bd19d8898c6622ef51df884af31bc5a4c78f19647458be9cfa6578"}
+    },
+    {
+      "group_index": 3,
+      "left": {"index": 6, "file": "shard_006.bin", "path": "weights/v10/shard_006.bin", "byte_offset": 6291456, "byte_length": 1048576, "sha256": "c943ab81c8811e3be2d52018f9967169ca9fc938fda899fae8b6b5784096d717"},
+      "right": {"index": 7, "file": "shard_007.bin", "path": "weights/v10/shard_007.bin", "byte_offset": 7340032, "byte_length": 1048576, "sha256": "313947b01912ea1a149ffa02b8871894c4ac3240f03c6d9f5ddbdf291760bcde"},
+      "parity": {"index": 3, "file": "parity_003.bin", "path": "weights/v10/parity_003.bin", "byte_length": 1048576, "sha256": "21adc452499e71e828d003d591ec5d34d23ca573975aeabd24a01bcd43bf25cd"}
+    },
+    {
+      "group_index": 4,
+      "left": {"index": 8, "file": "shard_008.bin", "path": "weights/v10/shard_008.bin", "byte_offset": 8388608, "byte_length": 1048576, "sha256": "d3bb4fb133672f5e332788d83af1f01761ad2d57c881cff41056a4229de2810a"},
+      "right": {"index": 9, "file": "shard_009.bin", "path": "weights/v10/shard_009.bin", "byte_offset": 9437184, "byte_length": 1048576, "sha256": "fa530fff137929e5280edfb8695e48345ef0f53ca6e7c810b6fc8a84af5a7136"},
+      "parity": {"index": 4, "file": "parity_004.bin", "path": "weights/v10/parity_004.bin", "byte_length": 1048576, "sha256": "b18fdfe80c7a6861f08df1a401775900b3f9dbf0ec6706ec573efdef5d091694"}
+    },
+    {
+      "group_index": 5,
+      "left": {"index": 10, "file": "shard_010.bin", "path": "weights/v10/shard_010.bin", "byte_offset": 10485760, "byte_length": 1048576, "sha256": "7a5d2f441c9c27702ccb1a95db4f6b3e401cf8294011c96c87ac1459c5285d5c"},
+      "right": {"index": 11, "file": "shard_011.bin", "path": "weights/v10/shard_011.bin", "byte_offset": 11534336, "byte_length": 1048576, "sha256": "474817538daf3e89579e41d08030a8e99537d0ff640322613472ce20e77dccff"},
+      "parity": {"index": 5, "file": "parity_005.bin", "path": "weights/v10/parity_005.bin", "byte_length": 1048576, "sha256": "582e0918341bd5b147ffb08dfc3145672cca27c6d40200eda5c52f4e14055d23"}
+    },
+    {
+      "group_index": 6,
+      "left": {"index": 12, "file": "shard_012.bin", "path": "weights/v10/shard_012.bin", "byte_offset": 12582912, "byte_length": 1048576, "sha256": "98df1d4c76e811bd8f89c4f8b3d9c36d29c99acfb6dff442ed50256c84965eca"},
+      "right": {"index": 13, "file": "shard_013.bin", "path": "weights/v10/shard_013.bin", "byte_offset": 13631488, "byte_length": 1048576, "sha256": "7145bd12e0c3cfffe660fa10713a367f5ed1a7b291d07f6e9dcc798abb06d71a"},
+      "parity": {"index": 6, "file": "parity_006.bin", "path": "weights/v10/parity_006.bin", "byte_length": 1048576, "sha256": "2ab73ea8980471ba945df7ec4697750e971df5c1d9f726f6c5817039ea8ccf63"}
+    },
+    {
+      "group_index": 7,
+      "left": {"index": 14, "file": "shard_014.bin", "path": "weights/v10/shard_014.bin", "byte_offset": 14680064, "byte_length": 1048576, "sha256": "e73bc56055f281aabe4b017b5b1505635cc2da9a24f488996d2d55e56c2bf050"},
+      "right": {"index": 15, "file": "shard_015.bin", "path": "weights/v10/shard_015.bin", "byte_offset": 15728640, "byte_length": 1048576, "sha256": "6b28fd91defb1755fe77aa16b779a896a9823f1c712a281722e2cea697a6d1a8"},
+      "parity": {"index": 7, "file": "parity_007.bin", "path": "weights/v10/parity_007.bin", "byte_length": 1048576, "sha256": "3c54a7869126bc3b23b50b4e6b56970ee86fa0ff0cc69ca6cbe3a77f0f919367"}
+    },
+    {
+      "group_index": 8,
+      "left": {"index": 16, "file": "shard_016.bin", "path": "weights/v10/shard_016.bin", "byte_offset": 16777216, "byte_length": 1048576, "sha256": "1b541eefe44954a47dce6839efd7ecc27a4d37e1035b728a076cb603065033c4"},
+      "right": {"index": 17, "file": "shard_017.bin", "path": "weights/v10/shard_017.bin", "byte_offset": 17825792, "byte_length": 1048576, "sha256": "563b0b637982bf96d697a90f953bdb3d3ece1dbd5189e7dd4248331fa8b71401"},
+      "parity": {"index": 8, "file": "parity_008.bin", "path": "weights/v10/parity_008.bin", "byte_length": 1048576, "sha256": "e5017ef080016655e603a524392614ed02c977d1bd617b7eaaee1176987a4743"}
+    },
+    {
+      "group_index": 9,
+      "left": {"index": 18, "file": "shard_018.bin", "path": "weights/v10/shard_018.bin", "byte_offset": 18874368, "byte_length": 1048576, "sha256": "5849d61d4f0b6a7fba8187cd05b84e9a94d0d56f458c4d7596d3c7e09f3b341a"},
+      "right": {"index": 19, "file": "shard_019.bin", "path": "weights/v10/shard_019.bin", "byte_offset": 19922944, "byte_length": 1048576, "sha256": "1b3e27e12b4156cc6b7bf6346ef21c858e39f2d222e7064af10cde84c1be6756"},
+      "parity": {"index": 9, "file": "parity_009.bin", "path": "weights/v10/parity_009.bin", "byte_length": 1048576, "sha256": "50ecc2d6c1f15df2211f4c730556ca97352e7a1c32489a48c3238234e3284cc6"}
+    },
+    {
+      "group_index": 10,
+      "left": {"index": 20, "file": "shard_020.bin", "path": "weights/v10/shard_020.bin", "byte_offset": 20971520, "byte_length": 1048576, "sha256": "9770c5292f83e56c32eb12b82239cd1eadba247e92aed1bef0ec721e224b2efc"},
+      "right": {"index": 21, "file": "shard_021.bin", "path": "weights/v10/shard_021.bin", "byte_offset": 22020096, "byte_length": 1048576, "sha256": "bed36db46b7579e0107815a948e6d0c94431f62d0c5dbec1e5e779a41b648e0f"},
+      "parity": {"index": 10, "file": "parity_010.bin", "path": "weights/v10/parity_010.bin", "byte_length": 1048576, "sha256": "79678eb19fe848a69070fb9694edf53aea48a59cfa4c1a6f96529fc5871efd38"}
+    },
+    {
+      "group_index": 11,
+      "left": {"index": 22, "file": "shard_022.bin", "path": "weights/v10/shard_022.bin", "byte_offset": 23068672, "byte_length": 1048576, "sha256": "f5dbcf3ef0abb73d57fbb300e2e83f41edc246b85d02138103cea39f20c7b7d4"},
+      "right": {"index": 23, "file": "shard_023.bin", "path": "weights/v10/shard_023.bin", "byte_offset": 24117248, "byte_length": 1048576, "sha256": "7e2c96f7e0f1ff7b5a7ac614cb261624f1c4effad293af7f58c511cf3b9e1e3d"},
+      "parity": {"index": 11, "file": "parity_011.bin", "path": "weights/v10/parity_011.bin", "byte_length": 1048576, "sha256": "9d1daf66acba8ad7b55b5b466fa8aaa68bbb7b4f23af2f9f7cf417d8a0ff2063"}
+    },
+    {
+      "group_index": 12,
+      "left": {"index": 24, "file": "shard_024.bin", "path": "weights/v10/shard_024.bin", "byte_offset": 25165824, "byte_length": 1048576, "sha256": "1f35767bb17ae95333419cfc60a5da65647157fc40d3e1a2a867060fc068be90"},
+      "right": {"index": 25, "file": "shard_025.bin", "path": "weights/v10/shard_025.bin", "byte_offset": 26214400, "byte_length": 1048576, "sha256": "b30d5b0b6161220e811bf7dbc17326dcbb362d02f35572e46181d1750a28b9ec"},
+      "parity": {"index": 12, "file": "parity_012.bin", "path": "weights/v10/parity_012.bin", "byte_length": 1048576, "sha256": "e79cc304e767e75e65a03307f7369b69c8971e66a36ae6fe1a60c8ddec3cb1e2"}
+    },
+    {
+      "group_index": 13,
+      "left": {"index": 26, "file": "shard_026.bin", "path": "weights/v10/shard_026.bin", "byte_offset": 27262976, "byte_length": 1048576, "sha256": "5d03cccf3a0426b2ffd20c81252da31c12a9d8edbfc2d88c1d1292f390c47d38"},
+      "right": {"index": 27, "file": "shard_027.bin", "path": "weights/v10/shard_027.bin", "byte_offset": 28311552, "byte_length": 1048576, "sha256": "ca5db97c38ae12c219498b6f98b163b96b3b331c1a11ce1cb7ac2aca38220b07"},
+      "parity": {"index": 13, "file": "parity_013.bin", "path": "weights/v10/parity_013.bin", "byte_length": 1048576, "sha256": "26b5366d42681dada57ee03ea9dc46362815e7c3085976a3635b516e6c0211ed"}
+    },
+    {
+      "group_index": 14,
+      "left": {"index": 28, "file": "shard_028.bin", "path": "weights/v10/shard_028.bin", "byte_offset": 29360128, "byte_length": 1048576, "sha256": "60a97734312bb8e2870844989982dd6953a5fc3106fe7c81ccd130afbb52e923"},
+      "right": {"index": 29, "file": "shard_029.bin", "path": "weights/v10/shard_029.bin", "byte_offset": 30408704, "byte_length": 1048576, "sha256": "abc409787e03441222f5982621176eaee90b856892b16656666aca221c50f96b"},
+      "parity": {"index": 14, "file": "parity_014.bin", "path": "weights/v10/parity_014.bin", "byte_length": 1048576, "sha256": "0d30c811aac1cb034fee2eac31c6537c3ae7ff9fc42e1bb8a1ea68b961d3f9f0"}
+    },
+    {
+      "group_index": 15,
+      "left": {"index": 30, "file": "shard_030.bin", "path": "weights/v10/shard_030.bin", "byte_offset": 31457280, "byte_length": 1048576, "sha256": "6ac67da1f4c0c4d2f26130c026b0dd7a0dee6ec8c370a76e7ae305d1b5a4bb71"},
+      "right": {"index": 31, "file": "shard_031.bin", "path": "weights/v10/shard_031.bin", "byte_offset": 32505856, "byte_length": 1048576, "sha256": "7eb8c0f218943cd706caa2c7131a52f675923bb563df142c385795497bba0f1d"},
+      "parity": {"index": 15, "file": "parity_015.bin", "path": "weights/v10/parity_015.bin", "byte_length": 1048576, "sha256": "562c1956350a4d19bcf9f1dd9b96ec2296e9942758c139f78143b2f0216c593e"}
+    },
+    {
+      "group_index": 16,
+      "left": {"index": 32, "file": "shard_032.bin", "path": "weights/v10/shard_032.bin", "byte_offset": 33554432, "byte_length": 1048576, "sha256": "83f7a312349e37a1f411fa771717339446b2cd51dc38a1defa38f22014bdad67"},
+      "right": {"index": 33, "file": "shard_033.bin", "path": "weights/v10/shard_033.bin", "byte_offset": 34603008, "byte_length": 1048576, "sha256": "434c23d432660524ca12fb9fa5f67f89d3f4a86e0d1b445594ad7286b66757e7"},
+      "parity": {"index": 16, "file": "parity_016.bin", "path": "weights/v10/parity_016.bin", "byte_length": 1048576, "sha256": "dd4605d966dadd14de3e74f7b15e9ac9af732bd384885f237f25c249850a56ba"}
+    },
+    {
+      "group_index": 17,
+      "left": {"index": 34, "file": "shard_034.bin", "path": "weights/v10/shard_034.bin", "byte_offset": 35651584, "byte_length": 1048576, "sha256": "0799e14f941df2fa814419513fd119abd47ea0796c621e47be67686bbbd3594f"},
+      "right": {"index": 35, "file": "shard_035.bin", "path": "weights/v10/shard_035.bin", "byte_offset": 36700160, "byte_length": 1048576, "sha256": "669ad127d23b7a1c210413db0d1301e137eb92ea10636769c9da56a79c9b52b4"},
+      "parity": {"index": 17, "file": "parity_017.bin", "path": "weights/v10/parity_017.bin", "byte_length": 1048576, "sha256": "c83db484903fc810e0f382bc721032fd3c600862ad71346a7c6d84dc095ee16b"}
+    },
+    {
+      "group_index": 18,
+      "left": {"index": 36, "file": "shard_036.bin", "path": "weights/v10/shard_036.bin", "byte_offset": 37748736, "byte_length": 1048576, "sha256": "d221b1af5e31e578f3f94fe1b1f6407af763883eb88a0e4164e29ad50a05cebb"},
+      "right": {"index": 37, "file": "shard_037.bin", "path": "weights/v10/shard_037.bin", "byte_offset": 38797312, "byte_length": 1048576, "sha256": "27efe31fa3d30dc9b146b44feada6fd85663390017e3d77f55ae1175dc910172"},
+      "parity": {"index": 18, "file": "parity_018.bin", "path": "weights/v10/parity_018.bin", "byte_length": 1048576, "sha256": "6d4d447eabd088b71ee29018988df14ab9cf03f453d18c93d4bdd62b2b6fa5cb"}
+    },
+    {
+      "group_index": 19,
+      "left": {"index": 38, "file": "shard_038.bin", "path": "weights/v10/shard_038.bin", "byte_offset": 39845888, "byte_length": 1048576, "sha256": "44a40963626d9ef52dc96f3b7fc963ac24a58ca37c7a8c0bfe77dea91a84558e"},
+      "right": {"index": 39, "file": "shard_039.bin", "path": "weights/v10/shard_039.bin", "byte_offset": 40894464, "byte_length": 1048576, "sha256": "20b8ab88eb83fc4a8a94bfa42c0034c55956e8c787bec787b8a4b35d1c47c5b8"},
+      "parity": {"index": 19, "file": "parity_019.bin", "path": "weights/v10/parity_019.bin", "byte_length": 1048576, "sha256": "41c0a7b4eebd1fc5e6fde3407a1fbeb548277a9f5f6b27c3b408e358351d42cb"}
+    },
+    {
+      "group_index": 20,
+      "left": {"index": 40, "file": "shard_040.bin", "path": "weights/v10/shard_040.bin", "byte_offset": 41943040, "byte_length": 1048576, "sha256": "3533f5fb9af9edb579b2c95b043793f7060c82f0b0ae2a9ab03d4bfc797f8fd8"},
+      "right": {"index": 41, "file": "shard_041.bin", "path": "weights/v10/shard_041.bin", "byte_offset": 42991616, "byte_length": 1048576, "sha256": "b1f2830e7841b39862a28c8d3866da2b6b4d1d59ec08d702a69f0036d83f6aaf"},
+      "parity": {"index": 20, "file": "parity_020.bin", "path": "weights/v10/parity_020.bin", "byte_length": 1048576, "sha256": "c2a3b32f3629eb870993e42b9f73753d584d6d7db4dea6387b0605c93d0e2b3d"}
+    },
+    {
+      "group_index": 21,
+      "left": {"index": 42, "file": "shard_042.bin", "path": "weights/v10/shard_042.bin", "byte_offset": 44040192, "byte_length": 1048576, "sha256": "26b2c592f2d511ba5697a5b7787a3caa8e63c6201d8396162dad09f1d20a0b1b"},
+      "right": {"index": 43, "file": "shard_043.bin", "path": "weights/v10/shard_043.bin", "byte_offset": 45088768, "byte_length": 1048576, "sha256": "4ccc403b60f0b4a3ebad13f0570f94578e86e12c27822de8f2ccea61d4d47699"},
+      "parity": {"index": 21, "file": "parity_021.bin", "path": "weights/v10/parity_021.bin", "byte_length": 1048576, "sha256": "2e4463c20c5eba1e39e511d0756a10effa8d9a87d0010107b0afdde76181a55f"}
+    },
+    {
+      "group_index": 22,
+      "left": {"index": 44, "file": "shard_044.bin", "path": "weights/v10/shard_044.bin", "byte_offset": 46137344, "byte_length": 1048576, "sha256": "7906bf8798213c6bcb9ae7a3c4c71215c964e81f727d2a4dd5eb46d80d774949"},
+      "right": {"index": 45, "file": "shard_045.bin", "path": "weights/v10/shard_045.bin", "byte_offset": 47185920, "byte_length": 1048576, "sha256": "eeed1f8aadcf0361b3557ec48d5ea1802c1bf83b2966654afbe97afe72001185"},
+      "parity": {"index": 22, "file": "parity_022.bin", "path": "weights/v10/parity_022.bin", "byte_length": 1048576, "sha256": "ca35a00355e87bbdb93c71afc0510bb9dc729b2b3f34656f0da21218edf18519"}
+    },
+    {
+      "group_index": 23,
+      "left": {"index": 46, "file": "shard_046.bin", "path": "weights/v10/shard_046.bin", "byte_offset": 48234496, "byte_length": 1048576, "sha256": "d23342b4de0832a98a8ebca7c7fe9fea41dfd465fea13aaa92dc5a0be143d79b"},
+      "right": {"index": 47, "file": "shard_047.bin", "path": "weights/v10/shard_047.bin", "byte_offset": 49283072, "byte_length": 1048576, "sha256": "dde60f3e531900d2930a81a5ee87b005cb72f35b6b3f14f77b8f887abee1912b"},
+      "parity": {"index": 23, "file": "parity_023.bin", "path": "weights/v10/parity_023.bin", "byte_length": 1048576, "sha256": "c600ab9b7528c73476c9c7bc9079588ffc14d5b86ea98db1f91cb3569ccca104"}
+    },
+    {
+      "group_index": 24,
+      "left": {"index": 48, "file": "shard_048.bin", "path": "weights/v10/shard_048.bin", "byte_offset": 50331648, "byte_length": 1048576, "sha256": "fa24a59fb8f55318bfcf41bfdac0d6677e046428a09af6e259d84c31407bae5f"},
+      "right": {"index": 49, "file": "shard_049.bin", "path": "weights/v10/shard_049.bin", "byte_offset": 51380224, "byte_length": 1048576, "sha256": "4093da0b53fad434a7032aa6b15fa45f1aa7eee9c4f2d0bb6ff627bd0e0442f8"},
+      "parity": {"index": 24, "file": "parity_024.bin", "path": "weights/v10/parity_024.bin", "byte_length": 1048576, "sha256": "3a8859469da53fb9724508538d0c35cc9dd6876834eaa310a54ad7fdac332aa0"}
+    },
+    {
+      "group_index": 25,
+      "left": {"index": 50, "file": "shard_050.bin", "path": "weights/v10/shard_050.bin", "byte_offset": 52428800, "byte_length": 1048576, "sha256": "d634406e4c6d95617f88e5ee7379cb0e58fedba103e9e4d557d952bb437af7eb"},
+      "right": {"index": 51, "file": "shard_051.bin", "path": "weights/v10/shard_051.bin", "byte_offset": 53477376, "byte_length": 1048576, "sha256": "9ebe26433d2e2e9700a5903f85d012969d20fb95efc04d5c4efff10a29ca1264"},
+      "parity": {"index": 25, "file": "parity_025.bin", "path": "weights/v10/parity_025.bin", "byte_length": 1048576, "sha256": "e6f7a31e17f995d6adab45ea0c7958ad15c247fce3cae139b7fddc2a3d43dd7b"}
+    },
+    {
+      "group_index": 26,
+      "left": {"index": 52, "file": "shard_052.bin", "path": "weights/v10/shard_052.bin", "byte_offset": 54525952, "byte_length": 1048576, "sha256": "8ec196239f330779c3128549ad90751f2a3c1882429f1c544ab90f2bfcbdc7aa"},
+      "right": {"index": 53, "file": "shard_053.bin", "path": "weights/v10/shard_053.bin", "byte_offset": 55574528, "byte_length": 1048576, "sha256": "8602ea81acec1d14a46af495ca785654402b01f4ac2586eb86006631af562f1b"},
+      "parity": {"index": 26, "file": "parity_026.bin", "path": "weights/v10/parity_026.bin", "byte_length": 1048576, "sha256": "6f4dbc098d617869b41ddbc09620264ce0c76202fa2c0eed820daaf392fc8c87"}
+    },
+    {
+      "group_index": 27,
+      "left": {"index": 54, "file": "shard_054.bin", "path": "weights/v10/shard_054.bin", "byte_offset": 56623104, "byte_length": 1048576, "sha256": "9856de63ea4da8ae1eb10a368258bcc39d0adb9ac55e473334f8e61491830349"},
+      "right": {"index": 55, "file": "shard_055.bin", "path": "weights/v10/shard_055.bin", "byte_offset": 57671680, "byte_length": 1048576, "sha256": "e60349054be745e7d1e01c9bca255fa202b6639bf5346e8f9e83ecc4dbf5591a"},
+      "parity": {"index": 27, "file": "parity_027.bin", "path": "weights/v10/parity_027.bin", "byte_length": 1048576, "sha256": "d5533db41c575aa7aa67bf2975183541de6839cd5cb2af4346f16887f7ed9579"}
+    },
+    {
+      "group_index": 28,
+      "left": {"index": 56, "file": "shard_056.bin", "path": "weights/v10/shard_056.bin", "byte_offset": 58720256, "byte_length": 1048576, "sha256": "52a1996909728b1747538d424efc005b75faf1c869c24d2c590333ae98df2c18"},
+      "right": {"index": 57, "file": "shard_057.bin", "path": "weights/v10/shard_057.bin", "byte_offset": 59768832, "byte_length": 1048576, "sha256": "6bbcbf410a60f5b1bfd0e1f414e3997480fe37726b5d271bc2b5f6176d827a60"},
+      "parity": {"index": 28, "file": "parity_028.bin", "path": "weights/v10/parity_028.bin", "byte_length": 1048576, "sha256": "d238d3ea0396ac910a8b4ec2a83b6b2871313f89c33f06d3486b2adf5fe33a84"}
+    },
+    {
+      "group_index": 29,
+      "left": {"index": 58, "file": "shard_058.bin", "path": "weights/v10/shard_058.bin", "byte_offset": 60817408, "byte_length": 1048576, "sha256": "3f0fde81a4f0fdc7adc63985b5d899c2f0772e56ccc6d4439f716f16af1c94bd"},
+      "right": {"index": 59, "file": "shard_059.bin", "path": "weights/v10/shard_059.bin", "byte_offset": 61865984, "byte_length": 1048576, "sha256": "da54025ad5a4248bd40e4d8e2ea263c62367772027b426131676c5691cf0eb44"},
+      "parity": {"index": 29, "file": "parity_029.bin", "path": "weights/v10/parity_029.bin", "byte_length": 1048576, "sha256": "0c18b96a5edb69b5a7932be1563b8da861998864e8144a93a671cfbc263fa905"}
+    },
+    {
+      "group_index": 30,
+      "left": {"index": 60, "file": "shard_060.bin", "path": "weights/v10/shard_060.bin", "byte_offset": 62914560, "byte_length": 1048576, "sha256": "f88c72c83178a86a9ef27a9fd67866a797f32c94f88a7bffa71e45ebb5fa6e78"},
+      "right": {"index": 61, "file": "shard_061.bin", "path": "weights/v10/shard_061.bin", "byte_offset": 63963136, "byte_length": 1048576, "sha256": "830e8cf997bb9216ea460011212dbdf4f6893819635a354b0d294d53183f6d67"},
+      "parity": {"index": 30, "file": "parity_030.bin", "path": "weights/v10/parity_030.bin", "byte_length": 1048576, "sha256": "0e2292a15392e1dface93a4782a4c9aac4c2ad769c2dabf4efa9aa77b076ede8"}
+    },
+    {
+      "group_index": 31,
+      "left": {"index": 62, "file": "shard_062.bin", "path": "weights/v10/shard_062.bin", "byte_offset": 65011712, "byte_length": 1048576, "sha256": "bbc14f1509a86208ef3de278169aa6f642a1cadb6bb7b5f9391632fb48e77f64"},
+      "right": {"index": 63, "file": "shard_063.bin", "path": "weights/v10/shard_063.bin", "byte_offset": 66060288, "byte_length": 1048576, "sha256": "5fe2bbb0e8be980f994c923890d03be593dd2362addbc9ac46c6b60839801bf0"},
+      "parity": {"index": 31, "file": "parity_031.bin", "path": "weights/v10/parity_031.bin", "byte_length": 1048576, "sha256": "f8c7134b57c784e22d32bf93cefd6212e794d733b3fcabdd8b7eaaea665827aa"}
+    },
+    {
+      "group_index": 32,
+      "left": {"index": 64, "file": "shard_064.bin", "path": "weights/v10/shard_064.bin", "byte_offset": 67108864, "byte_length": 1048576, "sha256": "fb3334db45c08110f99956eb996ca1b0f2e9f669db86a65965205eb386182849"},
+      "right": {"index": 65, "file": "shard_065.bin", "path": "weights/v10/shard_065.bin", "byte_offset": 68157440, "byte_length": 1048576, "sha256": "58d0ab2ce080aa4ceda27e5db211866ab4ea7f4da356523e7756ff39c0e94c76"},
+      "parity": {"index": 32, "file": "parity_032.bin", "path": "weights/v10/parity_032.bin", "byte_length": 1048576, "sha256": "6a1827cf91fd985177d9933d4e4b5b1c6c8017ac651e548b467214a33f69a1cf"}
+    },
+    {
+      "group_index": 33,
+      "left": {"index": 66, "file": "shard_066.bin", "path": "weights/v10/shard_066.bin", "byte_offset": 69206016, "byte_length": 1048576, "sha256": "3c7ec225591da783fb79b0cb7a81b2e264c1d619921d748e9ee60350dd8dc8a8"},
+      "right": {"index": 67, "file": "shard_067.bin", "path": "weights/v10/shard_067.bin", "byte_offset": 70254592, "byte_length": 1048576, "sha256": "a6ce1ab4340415888d9276398c0665024f1823e7aa47ab9782894885a0088a3b"},
+      "parity": {"index": 33, "file": "parity_033.bin", "path": "weights/v10/parity_033.bin", "byte_length": 1048576, "sha256": "cf849498de4592732929ea981c0b3d029d24a3ed96c957094932fc6ddfddbcf3"}
+    },
+    {
+      "group_index": 34,
+      "left": {"index": 68, "file": "shard_068.bin", "path": "weights/v10/shard_068.bin", "byte_offset": 71303168, "byte_length": 1048576, "sha256": "25b118f526fce58868845e8668fa7df88dec89f5ca2b5698939ab009e7553554"},
+      "right": {"index": 69, "file": "shard_069.bin", "path": "weights/v10/shard_069.bin", "byte_offset": 72351744, "byte_length": 1048576, "sha256": "c7acc5d7f794c2cca63b50bf3498f19d8c013dca4fc2204a571951336e445f31"},
+      "parity": {"index": 34, "file": "parity_034.bin", "path": "weights/v10/parity_034.bin", "byte_length": 1048576, "sha256": "1b83f293cb991c0b498ebfcc7fd2915c96eca76ea7f60e9990c0b937dba3714e"}
+    },
+    {
+      "group_index": 35,
+      "left": {"index": 70, "file": "shard_070.bin", "path": "weights/v10/shard_070.bin", "byte_offset": 73400320, "byte_length": 1048576, "sha256": "8250ea958bf34b029e91c7b473ae3932de09657539f6118960e5f52b057bebeb"},
+      "right": {"index": 71, "file": "shard_071.bin", "path": "weights/v10/shard_071.bin", "byte_offset": 74448896, "byte_length": 1048576, "sha256": "429b6df619a639478838cc9fb6166900deed90b2769b0e0f1868eb904206a28b"},
+      "parity": {"index": 35, "file": "parity_035.bin", "path": "weights/v10/parity_035.bin", "byte_length": 1048576, "sha256": "c089ccc47d1e47d05b42e1ab47f19a0ba4cdc6c62a459174724cfc4d39cd1d44"}
+    },
+    {
+      "group_index": 36,
+      "left": {"index": 72, "file": "shard_072.bin", "path": "weights/v10/shard_072.bin", "byte_offset": 75497472, "byte_length": 186935, "sha256": "ccb5a4892b8840ec75fd5b9e3e03e605d8320209d7a3136834f177451bb032f8"},
+      "right": null,
+      "parity": {"index": 36, "file": "parity_036.bin", "path": "weights/v10/parity_036.bin", "byte_length": 186935, "sha256": "ccb5a4892b8840ec75fd5b9e3e03e605d8320209d7a3136834f177451bb032f8"}
+    }
+  ],
+  "mirrors": [
+    "https://raw.githubusercontent.com/Casey-allard/lexlean-r4/main/gpu/weights/v10/"
+  ]
+}

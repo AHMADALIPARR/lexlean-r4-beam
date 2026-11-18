@@ -1,0 +1,4 @@
+mvm-elixir/_build/
+mvm-elixir/mvm_ex
+*.uorlut.stitched
+/tmp/

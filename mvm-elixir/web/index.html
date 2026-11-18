@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>lexlean-r4 gpu — web LLM + microVMs</title>
+<style>
+  body { font-family: system-ui, sans-serif; background: #0e0f13; color: #e8e8ec; margin: 0; }
+  header { padding: 18px 24px; border-bottom: 1px solid #2a2c33; }
+  h1 { font-size: 20px; margin: 0; }
+  p.sub { color: #9a9cab; margin: 6px 0 0; }
+  main { padding: 18px 24px; max-width: 980px; }
+  table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+  th, td { border: 1px solid #2a2c33; padding: 8px 10px; text-align: left; font-size: 14px; }
+  th { background: #17181d; }
+  button { background: #d8a419; color: #111; border: 0; padding: 7px 14px; font-weight: 600; cursor: pointer; border-radius: 4px; }
+  button:disabled { opacity: .5; }
+  input[type=text] { width: 520px; padding: 8px; background: #17181d; color: #e8e8ec; border: 1px solid #2a2c33; border-radius: 4px; }
+  pre { background: #17181d; padding: 12px; white-space: pre-wrap; word-break: break-word; border: 1px solid #2a2c33; min-height: 120px; }
+  .note { color: #9a9cab; font-size: 13px; }
+  .ok { color: #7fd08a; } .bad { color: #e06c6c; }
+</style>
+</head>
+<body>
+<header>
+  <h1>lexlean-r4 gpu — in-browser web LLM, served from Elixir microVMs</h1>
+  <p class="sub">Sliced weight packs from the <code>gpu/weights</code> clone, verified against their manifests, run inside software-backend microVM sessions (BEAM port of mvm). The integer inference engine itself lives in upstream <code>crates/wasm</code>, which is not part of this <code>gpu/</code> clone.</p>
+</header>
+<main>
+  <h2>Weight packs</h2>
+  <div id="packs">Loading…</div>
+  <h2>Run in a microVM</h2>
+  <p class="note">The command is gated by the mvm command gate, planned, signed and audit-logged, then run in an isolated guest process with the selected pack mounted read-only. No network device: egress is default-deny on the host.</p>
+  <label>Pack
+    <select id="pack">
+      <option value="">(none)</option>
+      <option value="v8">v8 — UOR-R4 GLM v8</option>
+      <option value="v9">v9 — UOR-R4 GLLM v9</option>
+      <option value="v10">v10 — UOR-R4 GLLM v10</option>
+    </select>
+  </label><br><br>
+  <input type="text" id="cmd" value="ls -la; sha256sum pack.part000 2>/dev/null || ls pack">
+  <button id="run">Run</button>
+  <pre id="out"></pre>
+  <p class="note">Try a blocked command to see the gate work: <code>rm -rf /</code> or <code>cat /etc/shadow</code>.</p>
+</main>
+<script>
+async function loadPacks() {
+  const r = await fetch('/api/weights');
+  const j = await r.json();
+  if (j.error) { document.getElementById('packs').textContent = 'Error: ' + j.error; return; }
+  const rows = j.packs.map(p =>
+    '<tr><td>' + p.id + '</td><td>' + p.source_model + '</td><td>' + (p.format || '') +
+    '</td><td>' + (p.total_bytes || '') + '</td><td>' + p.shards_present_count + '/' + p.shard_count +
+    '</td><td>' + (p.shards_present ? '<span class="ok">present</span>' : '<span class="bad">pieces on branch ' + (p.mirror_branch || 'n/a') + '</span>') +
+    '</td><td><button data-verify="' + p.id + '">Verify SHA-256</button> <span id="v-' + p.id + '"></span></td></tr>').join('');
+  document.getElementById('packs').innerHTML =
+    '<table><tr><th>Pack</th><th>Source model</th><th>Format</th><th>Bytes</th><th>Shards on disk</th><th>Status</th><th>Check</th></tr>' + rows + '</table>';
+  document.querySelectorAll('[data-verify]').forEach(b => b.onclick = async () => {
+    const id = b.dataset.verify;
+    const el = document.getElementById('v-' + id);
+    el.textContent = 'verifying…';
+    const r = await fetch('/api/weights/verify', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({pack: id})});
+    const j = await r.json();
+    el.textContent = j.verified ? ('OK ' + j.ok + '/' + j.total) : ('FAIL ok=' + j.ok + ' missing=' + (j.missing || []).length + ' bad=' + (j.bad || []).length);
+    el.className = j.verified ? 'ok' : 'bad';
+  });
+}
+document.getElementById('run').onclick = async () => {
+  const cmd = document.getElementById('cmd').value;
+  const pack = document.getElementById('pack').value;
+  const out = document.getElementById('out');
+  out.textContent = 'running in microVM…';
+  const r = await fetch('/api/vm/run', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({command: cmd, pack: pack || undefined})});
+  const j = await r.json();
+  out.textContent = j.ok ? ('exit ' + j.exit_status + '\n' + j.output) : ('ERROR: ' + j.error + (j.pattern ? ' [' + j.pattern + ' / ' + j.category + ']' : ''));
+};
+loadPacks();
+</script>
+</body>
+</html>
