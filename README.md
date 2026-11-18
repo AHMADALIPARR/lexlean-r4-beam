@@ -117,7 +117,7 @@ model; upstream `crates/wasm` (not in the `gpu/` clone).
 | v10 shards | `./mvmctl weights verify v10` | 73/73 ok; 37 parity files present, reconstruction not verified |
 | v12_360m shards | `./mvmctl weights verify v12_360m` | 188/188 ok |
 | v13-0.6B shards | `./mvmctl weights verify v13_qwen3_0_6b` via staging gpu root | 410/410 ok, 2026-11-17, from branch clone (617 files) |
-| v13-1.7B shards | `./mvmctl weights verify v13_qwen3_1_7b` | not verified yet; pieces still being recovered, count not stated until the command reports it |
+| v13-1.7B shards | `./mvmctl weights verify v13_qwen3_1_7b` | 1088/1088 ok, 2026-11-18, from branch clone (1,634 files, 6.1G) |
 | tokenizer | SHA-256 of `gpu/tokenizer.json` | `d36d3e8700a123e620012df77de195f244fbdb4d05d9e1aa7e77fa9407590f89`, matches the upstream gpu README claim |
 | `short.uorlut` | magic bytes | `UORLUT01`, 2,156,480 B |
 | `rtx5090_glm_weights.bin` | magic bytes | `UR4GLM06`, 800,436 B |
@@ -344,8 +344,11 @@ the gpu root. The v13-0.6B pieces were verified after this
 repository was cut, on 2026-11-17, at 410/410 shards ok against
 their manifest, from the branch clone at
 `~/workspace/lexlean-r4-weights-v13-qwen3-0.6b` (617 files on disk).
-The v13-1.7B pieces were still being recovered at that time; see
-STATUS.md for their state.
+The v13-1.7B pieces were verified after this repository was cut, on
+2026-11-18, at 1088/1088 shards ok against their manifest, from the
+branch clone at `~/workspace/lexlean-r4-weights-v13-qwen3-1.7b`
+(1,634 files on disk). The first 1.7B recovery attempt died on a
+promisor fetch disconnect after 36 minutes; the retry completed.
 
 ## The runtime: mvm-elixir
 

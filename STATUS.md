@@ -100,10 +100,16 @@ One organized repo cut from two upstreams, by the GitHub size rule:
   and its `sparse-checkout set weights` left the v13-1.7B working tree
   empty (1634 files showing as deleted, index empty). Recovery:
   `git sparse-checkout disable` + `git reset --hard HEAD` to fetch
-  the promisor blobs and check the tree out. v13-1.7B verification
-  was still in progress at the time of this edit; its count is not
-  stated here until `weights verify` reports it. Use the corrected
-  `scripts/fetch-weights.sh` to fetch and verify on demand.
+  the promisor blobs and check the tree out. v13-1.7B VERIFIED
+  2026-11-18: 1088/1088 shards ok via `mvmctl weights verify
+  v13_qwen3_1_7b` with a staging gpu root (symlinks in
+  `/tmp/v13-17b-gpu/weights/v13_qwen3_1_7b/`), from the branch clone
+  at `~/workspace/lexlean-r4-weights-v13-qwen3-1.7b` (1,634 files:
+  1,088 pieces + 544 parity + 2 manifests, 6.1G, clean tree). The
+  first recovery attempt died on a promisor fetch disconnect after
+  36 minutes (early EOF, one blob unfetched); the retry completed.
+  Use the corrected `scripts/fetch-weights.sh` to fetch and verify
+  on demand.
 - A VM restart during this work wiped system Erlang again
   (`/usr/lib/erlang` gone, `escript` missing). Reinstalled OTP 25
   from `~/workspace/.tools/erlang-debs/` (all 11 debs, same set as
