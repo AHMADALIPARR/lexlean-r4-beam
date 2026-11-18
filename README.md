@@ -1,5 +1,11 @@
 # lexlean-r4-beam — UOR-R4 weights and microVMs on the BEAM
 
+![tests: 46 passing](https://img.shields.io/badge/tests-46%20passing-brightgreen)
+![weights verified](https://img.shields.io/badge/weights-360%2F360%20%C2%B7%2025%2F25%20%C2%B7%2073%2F73%20%C2%B7%20188%2F188-blue)
+![license: Apache-2.0 + MIT](https://img.shields.io/badge/license-Apache--2.0%20%2B%20MIT-blue)
+![Elixir 1.18.4 / OTP 25](https://img.shields.io/badge/elixir-1.18.4%20%2F%20OTP%2025-purple)
+![repo: 589 MB](https://img.shields.io/badge/repo-589%20MB-lightgrey)
+
 This repository is the functioning cut of two upstream projects: the `gpu/`
 tree of [Casey-allard/lexlean-r4](https://github.com/Casey-allard/lexlean-r4)
 (main, `ed3ba33`) and the microVM runtime of
@@ -10,6 +16,37 @@ guest tools those sessions use, and the training and corpus source that
 produces the packs. It does not hold the parts that do not run, do not
 verify, or do not fit on GitHub. The size rule decides the cut, and this
 file states the rule, the cut, and the evidence for every claim in it.
+
+## Screenshots
+
+Every photo below is a real render from the build VM on 2026-11-18:
+the web page served live from `mvm-elixir/` on `:8931`, and the
+terminal running the same commands. Nothing here is a mockup.
+
+![The web page live on :8931: six packs, four present, two on their branches](docs/screenshots/web-packs.png)
+
+The web page live on `:8931`: six packs, four present on disk, two on
+their upstream branches, each with a Verify SHA-256 button.
+
+![Terminal: doctor, weights verify, and a microVM run](docs/screenshots/terminal-doctor.png)
+
+Terminal: `./mvmctl doctor`, `./mvmctl weights verify` for all four
+packs in the repo, and `./mvmctl machine run` printing
+`hello-from-a-microvm`.
+
+![Verify in the page: v12_360m OK 188/188](docs/screenshots/web-verify.png)
+
+Verify in the page: v12_360m returns OK 188/188.
+
+![A benign command in a microVM: exit 0](docs/screenshots/web-run.png)
+
+A benign command in a microVM: `printf hello-from-a-microvm` with pack
+v8 mounted, exit 0, output shown.
+
+![The gate: rm -rf / refused](docs/screenshots/web-gate.png)
+
+The gate: `rm -rf /` is refused before it reaches the guest,
+`ERROR: blocked by command gate [rm -rf / / destructive]`.
 
 ## What this repository is
 
@@ -237,6 +274,7 @@ lexlean-r4-beam/
     fetch-weights.sh         fetch v13 pieces on demand, then verify
   docs/
     upstream-gpu-README.md   upstream gpu/README.md, verbatim, for reference
+    screenshots/             web + terminal photos, rendered 2026-11-18
 ```
 
 The layout is flat on purpose. The runtime is one directory, the data

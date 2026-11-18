@@ -45,6 +45,10 @@ One organized repo cut from two upstreams, by the GitHub size rule:
   inventory, `POST /api/vm/run` benign returns output + exit 0,
   `rm -rf /` returns 403 with pattern/category `destructive`,
   `POST /api/weights/verify` v12_360m returns 188/188 verified.
+- Screenshots rendered 2026-11-18 from the live page and the
+  terminal on this VM: `docs/screenshots/` (5 PNGs: pack table,
+  terminal doctor/verify/run, in-page verify OK 188/188, microVM
+  run exit 0, gate refusing `rm -rf /`).
 - `machine run` via escript prints guest output, exit 0.
 - Rust compile check, `rustc` edition 2021 `-O` from
   `~/workspace/.tools/cargo/bin/`, in `gpu/rust/`:
