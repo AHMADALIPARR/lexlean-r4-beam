@@ -12,7 +12,7 @@ One organized repo cut from two upstreams, by the GitHub size rule:
   `mvm-elixir/` (local commit `4867c9b` in the source clone).
 - Cut rule: GitHub blocks a single file over 100 MiB, warns above
   50 MiB, recommends a repo under 1 GB total, strongly under 5 GB,
-  2 GB per push. This repo: 589 MB total, 885 files, largest file
+  2 GB per push. This repo: 589 MB total, 890 files, largest file
   2,156,480 B (`gpu/short.uorlut`), 0 files over 50 MB.
 - Size math: minimal (v8/v9/v10) 308 MB + v12 pieces 282 MB = 590 MB.
   Adding v13-0.6B (429 MB) would make ~1.02 GB, just over the 1 GB
@@ -123,5 +123,9 @@ One organized repo cut from two upstreams, by the GitHub size rule:
 - The browser integer-inference engine (upstream `crates/wasm`) is
   not in this repo, so no in-browser inference run was performed.
   The page serves weight metadata and runs host-side microVM sessions.
-- No push has been made. Pushing this repo anywhere needs the owner
-  to name the destination repo and supply a fresh key, as always.
+- Pushed 2026-11-17 23:50 PST to AHMADALIPARR/lexlean-r4-beam
+  (owner-ordered repo creation + push, key #11, this pass only):
+  880 objects, 456.84 MiB, remote HEAD = local HEAD `c809b1b`,
+  README + LICENSE-MIT + LICENSE-APACHE all raw 200, remote
+  stripped after the push. Any further push needs a fresh key,
+  as always.
